@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+		<title>Sedona</title>
+		<meta charset="utf-8">	
+		<meta name="description" content="Sedona description">
+		<meta name="author" content="Lily">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+		<link rel="stylesheet" href="css/main.css">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/ptsans.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <header class="page-header">
+                <div class="menu-section">
+                    <a href="#" class="logo-desktop menu-section__logo-desktop">
+                        <img src="img/sedona-desktop-logo.svg" class="logo-desktop__img" alt="logo">
+                    </a>
+                    <a href="#" class="logo-mobile menu-section__logo-mobile">
+                        <img src="img/sedona-mobile-logo.svg" class="logo-mobile__img" alt="logo">
+                    </a> 
+
+                    <nav class="nav-menu menu-section__nav-menu" id="nav-menu">
+                        <div class="menu-button"> 
+                                <div class="menu-button__bar1"></div>
+                                <div class="menu-button__bar2"></div>
+                                <div class="menu-button__bar3"></div>
+                        </div>
+                        <ul class="nav-menu__list">
+                            <li class="nav-menu__item">
+                                <a href="index.html" class="nav-menu__link">Главная</a>
+                            </li>
+                            <li class="nav-menu__item nav-menu__item--with-margin">
+                                <a href="#photo-and-video" class="nav-menu__link">Фото и видео</a>					
+                            </li>
+                            <li class="nav-menu__item">
+                                <a href="#review-form" class="nav-menu__link">Форма отзыва</a>				
+                            </li>
+                            <li class="nav-menu__item">
+                                <a href="https://dataart.com/" target="_blank" class="nav-menu__link">DataArt</a>						
+                            </li>					
+                        </ul> 
+                    </nav>
+                </div>	
+                <div class="welcome-section">
+                    <img src="img/sedona-welcome-message.svg" class="welcome-section__img" alt="Welcome to the gorgeus Sedona. Because the Grand Canyon sucks!">
+                    <div class="welcome-section__shape"></div>
+                </div>							
+            </header>           
+            <main>
+                <div class="feedback">
+                    <div class="feedback__intro">
+                        <h1 class="feedback__title">Оставьте свой отзыв</h1>
+                        <p class="feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+                    </div>
+                    <form class="feedback__form" action="/echo" method="post">
+
+                        <fieldset class="feedback__section  feedback__section--narrow feedback__section--framed impression">
+                            <legend class="feedback__subtitle feedback__subtitle--no-margin-left feedback__subtitle--first-line">Ваше Общее впечатление:</legend>
+                            <div class="feedback__answers-group">
+                                <div class="feedback__item feedback__item--bottom-margin radio">
+                                    <input type="radio" name="impression" id="positive" class="radio__input" checked>  
+                                    <label for="positive" class="feedback__answer-label radio__label">Скорее положительное</label>
+                                </div>
+                                <div class="feedback__item feedback__item--bottom-margin radio">
+                                    <input type="radio" name="impression" id="negative" class="radio__input">
+                                    <label for="negative" class="feedback__answer-label  radio__label">Скорее отрицательное</label>
+                                </div>
+                                <div class="feedback__item radio">
+                                    <input type="radio" name="impression" id="hard to answer" class="radio__input">
+                                    <label for="hard to answer" class="feedback__answer-label  radio__label">Затрудняюсь ответить</label>
+                                </div> 
+                            </div>                                                                                   
+                        </fieldset>  
+
+                        <fieldset class="feedback__section feedback__section--narrow intro ">
+                            <legend class="feedback__subtitle feedback__subtitle--no-margin-left feedback__subtitle--first-line">Представьтесь:</legend>
+                            <div class="feedback__answers-group">
+                                <div class="feedback__item feedback__item--bottom-margin">
+                                    <label for="first-name" class="feedback__question-label">Имя*:</label>
+                                    <input type="text" name="introduce" id="first-name" placeholder="Петр" class="feedback__answer-field feedback__answer--text" required> 
+                                </div>
+                                <div class="feedback__item feedback__item--bottom-margin">
+                                    <label for="second-name" class="feedback__question-label">Фамилия*:</label>                                    
+                                    <input type="text" name="introduce" id="second-name" placeholder="Иванов" class="feedback__answer-field feedback__answer--text" required>
+                                </div>
+                                <div class="feedback__item"> 
+                                    <label for="middle-name" class="feedback__question-label">Отчество:</label>
+                                    <input type="text" name="introduce" id="middle-name" placeholder="Александрович" class="feedback__answer-field feedback__answer--text">
+                                </div> 
+                            </div>   
+                        </fieldset>
+
+                        <fieldset class="feedback__section feedback__section--decorated contacts">
+                            <legend class="feedback__subtitle">Контактная информация:</legend>
+                            <div class="feedback__answers-group feedback__answers-group--stretched-along">
+                                <div class="feedback__item feedback__item--right-margin feedback__item--column">
+                                    <label for id="phone" class="feedback__question-label">Телефон*:</label>
+                                    <div class="feedback__input-wrapper">
+                                        <input type="phone" name="phone" placeholder="Введите телефон" class="feedback__answer-field" required>
+                                        <div class="input-icon-box">
+                                            <svg class="input-icon-box__svg input-icon-box__svg--phone">
+                                                <use xlink:href="#icon-phone"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback__item feedback__item--column">
+                                    <label for id="email" class="feedback__question-label">Электронная почта*:</label>                                    
+                                    <div class="feedback__input-wrapper">
+                                        <input type="email" name="email" placeholder="Введите e-mail" class="feedback__answer-field" required>
+                                        <div class="input-icon-box">
+                                            <svg class="input-icon-box__svg input-icon-box__svg--letter">
+                                                <use xlink:href="#icon-letter"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>                        
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="feedback__section feedback__section--decorated attractions">
+                            <legend class="feedback__subtitle">Посещенные <br> достопримечательности:</legend>
+                            <div class="feedback__answers-group  feedback__answers-group--stretched-along">
+                                <div class="feedback__item checkbox">
+                                    <input type="checkbox" id="devils-bridge" class="feedback__answer checkbox__input" checked>
+                                    <label for="devils-bridge" class="feedback__answer-label checkbox__label">Мост Дьявола</label>
+                                </div>
+                                <div class="feedback__item checkbox">
+                                    <input type="checkbox" id="bell-rock" class="feedback__answer checkbox__input">
+                                    <label for="bell-rock" class="feedback__answer-label checkbox__label">Гора-Колокол</label>
+                                </div>
+                                <div class="feedback__item checkbox">
+                                    <input type="checkbox" id="slide-rock-state-park" class="feedback__answer checkbox__input">
+                                    <label for="slide-rock-state-park" class="feedback__answer-label checkbox__label">Слайд-парк</label>
+                                </div>
+                                <div class="feedback__item checkbox">
+                                    <input type="checkbox" id="red-rocks" class="feedback__answer checkbox__input">
+                                    <label for="red-rocks" class="feedback__answer-label checkbox__label">Красные скалы</label>
+                                </div>                                                        
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="feedback__section feedback__section--decorated emotions">
+                            <legend class="feedback__subtitle">Опишите свои эмоции:</legend>
+                            <div class="feedback__item feedback__item--textarea">                            
+                                <textarea name="emotions" id="emotions-field" placeholder="Опишите подробно все свои восторги" class="feedback__textarea feedback__answer-field feedback__answer-field--big"></textarea class="feedback__answer">
+                            </div>                               
+                        </fieldset> 
+
+                        <fieldset class="feedback__section send">
+                            <div class="feedback__item">                            
+                                <input type="submit" value="Отправить отзыв" class="feedback__button button"> 
+                                <span class="feedback__note">* — обязательные поля</span> 
+                            </div>                         
+                        </fieldset> 
+                    </form>                                                                                  
+                </article>
+            </main>
+
+			<footer class="page-footer">
+                <div class="hashtag page-footer__hashtag">
+                    <p class="hashtag__text">#visitsedona</p>
+                </div>
+                <div class="follow-us  page-footer__follow-us">
+                    <ul class="follow-us__list">
+                        <li class="follow-us__item follow-us__item--with-margin">
+                            <a href="#" class="follow-us__link" aria-label="Twitter">
+                                <svg class="follow-us__svg follow-us__svg--twitter">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>	
+                            </a>
+                        </li>
+                        <li class="follow-us__item  follow-us__item--with-margin"> 
+                            <a href="#" class="follow-us__link" aria-label="Facebook">
+                                <svg class="follow-us__svg  follow-us__svg--facebook">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="follow-us__item">
+                            <a href="#" class="follow-us__link" aria-label="Youtube">
+                                <svg class="follow-us__svg  follow-us__svg--youtube">
+                                    <use xlink:href="#youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>	
+                </div>
+                <div class="copyright page-footer__copyright">
+                    <span class="copyright__text">Разработано</span>
+                    <a href="https://htmlacademy.ru/" class="copyright__link" aria-label="HTML academy" target="_blank">
+                        <svg class="copyright__svg">
+                            <use xlink:href="#icon-html-academy"></use>
+                        </svg>
+                    </a>
+                </div>
+            </footer>
+        </div>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="svg-sprite"> 
+            <symbol id="icon-html-academy" viewBox="0 0 26.94 34.09">
+                <path d="M13.62,0.02L13.47,0L0,1.41v24.66l13.47,8.02L26.9,26.1l0.04-0.02V1.41L13.62,0.02z M25.02,12.13L13.49,5.33l0-0.1
+                    l-0.09,0.05l-0.09-0.06v0.11L1.92,12.12V3.15l11.55-1.21l11.55,1.21L25.02,12.13L25.02,12.13z M13.41,6.79l11.52,6.71l-4.48,2.64
+                    l-7.09-4.22l-0.01,1.42l5.9,3.51l-0.86,0.51l-5.03-2.99l-0.01,1.41l3.83,2.27l-0.78,0.52l-3.03-1.79l-0.01,1.41l1.85,1.09l-1.8,1.08
+                    L2.03,13.62L13.41,6.79z M1.92,15.13l11.41,6.79l0.02,1.04l-7.94-4.73L5.4,19.65l7.98,4.79l0.02,1.08l-7.97-4.74L5.41,22.2
+                    l8.02,4.82l0.05,0.02l8.14-4.87l-0.01-5.18l3.42-2.04v10.02l-11.55,6.87L1.92,24.98V15.13z"/>
+            </symbol>
+        
+            <symbol id="twitter" viewBox="0 0 17.5 14.66">
+                <path d="M11.36,0.48c1.79-0.46,3.16,0.25,3.79,1.1c0.71-0.21,1.41-0.45,2.13-0.66c0,0.8-0.55,1.41-0.91,1.65
+                    c0.72,0.16,1.38-0.46,1.38-0.46c-0.18,0.93-1.06,1.67-1.66,1.89c-0.25,6.29-3.36,10.46-10.68,10.33c-0.55,0,0.08,0-0.47,0
+                    c-0.43,0-4.41-0.43-5.19-1.76c2.41,0.18,4.13-0.39,4.97-1.1c-1.02-0.28-2.84-0.44-3.16-2.75c0.37,0.1,0.6,0.21,1.26,0.11
+                    c-1.27-0.8-2.68-1.47-2.6-3.52c0.3,0.3,1.13,0.5,1.42,0.44C0.9,5.53-0.44,2.62,0.7,1.14C2.62,2.87,4.66,4.5,8.28,4.65
+                    C8.5,2.52,9.48,1.08,11.36,0.48z"/>
+            </symbol>
+                
+            <symbol id="facebook" viewBox="0 0 8.67 18.94">
+                <path d="M6.35,3.66c0.83,0,1.66,0,2.49,0c0-1.06,0-2.12,0-3.19c-1,0-1.99,0-2.99,0C2.59,0.64,1.43,2.74,1.86,6.28h-2.02v3.34h2.03
+                    c0,2.95,0,5.9,0,8.85c1.33,0,2.66,0,3.98,0c0-2.95,0-5.9,0-8.85h2.96V6.28H5.84C5.82,5.29,5.8,4,6.35,3.66z"/>
+            </symbol>
+        
+            <symbol id="youtube" viewBox="0 0 19.98 14.02">
+                <path d="M17.15,0.01H2.83c-1.56,0-2.84,1.27-2.84,2.83v8.34c0,1.56,1.28,2.83,2.84,2.83h14.32c1.56,0,2.84-1.27,2.84-2.83V2.84
+                    C19.99,1.28,18.71,0.01,17.15,0.01z M7.03,10.39V3.63l6.78,3.38L7.03,10.39z"/>
+            </symbol>
+
+            <symbol id="icon-phone" viewBox="0 0 18 18">
+                <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
+                    <g id="phone" transform="translate(85.000000, 126.000000)">
+                        <path id="Shape" class="st0" d="M3.6,7.8c1.4,2.8,3.8,5.1,6.6,6.6l2.2-2.2c0.3-0.3,0.7-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6
+                            c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6
+                            c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z"/>
+                    </g>
+                </g>
+            </symbol>
+
+            <symbol id="icon-letter" viewBox="0 0 16 16">
+                    <path d="M8,10c-0.27,0-0.5-0.09-1-0.34L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.66C8.5,9.91,8.27,10,8,10z M15,2H1
+                    C0.45,2,0,2.45,0,3v0.76l8,4.21l8-4.21V3C16,2.45,15.55,2,15,2z"/>
+            </symbol>
+        </svg>
+    </body>
+	<script src="js/script.js"></script>	
+</html>

@@ -1,0 +1,82 @@
+/*hotel-reservation block*/
+.hotel-reservation {
+    &__iframe {
+        max-width: 100%; 
+    }
+
+    &__hotel-search {
+        height: 331px;
+        text-align: center;
+
+        @media @tablet {
+            height: 318px;
+        }
+    }
+
+    .hotel-search {
+
+        @media @phone {
+            background-color: @gray-superlight;
+            height: 287px;
+        }
+
+        &__title {
+            padding-top: 56px;
+            .text-block-parameters(30px; 26px; bold; @base-text-color; 0 0 30px 0);
+
+            @media @phone {
+                font-size: 21px;
+		        margin-bottom: 18px;
+		        padding-top: 32px;
+            }
+        }
+    
+        &__text {
+            .text-block-parameters(14px; 24px; normal; @lightened-text-color; 0 auto 42px auto);
+
+            @media @phone {
+                margin-bottom: 26px;
+		        width: 263px;
+            }
+        }
+
+        &__button {
+            background-color: @button-default-color;
+            .size(38%; 58px);
+            .horisontal-centered();
+            .flex-block-parameteres(row; center);
+            padding: 0;
+            border: none;
+            font: inherit;
+            text-transform: inherit;
+            cursor: pointer;
+            max-width: 458px;
+            .default-title-style();
+            color: @white;
+        
+            &:hover {	
+                background-color: @button-hover-color;
+                transition-property: background-color;
+                transition-duration: 1s;
+            }
+        
+            &:active {
+                background-color: @button-active-color;
+                color: @button-active-text-color;
+                border: none;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+            }
+
+            @media @tablet {
+                width: 458px;
+            }
+
+            @media @phone {
+                min-width: 280px;
+            }
+        }
+    }
+
+}
+

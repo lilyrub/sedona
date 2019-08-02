@@ -1,0 +1,86 @@
+/*main and special*/
+
+
+html {
+	background-color: @outer-color;
+}
+
+.wrapper {
+    .sans-serif();
+    .bg-white();
+    .horisontal-centered();
+    color: @base-text-color;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    padding: 0;
+    min-width: 320px;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+
+   @media @phone {
+        br {
+            content: " ";
+            display: none;
+        }
+   }
+}
+
+.svg-sprite {
+	display: none;
+}
+
+
+.class-for-ie {
+
+    .welcome-section__shape{
+        display: block;
+        .size(100%; 57px);
+        background: url("images/triangle-shape.svg") no-repeat 50% 50%;
+        background-size: 1200px 57px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .reasons-header {
+        position: relative;
+    }
+
+    .reasons-header__shape {
+        display: none;
+
+        @media @phone {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: url("images/triangle-shape-bottom.svg") no-repeat 50% 50%;
+            background-size: 720px 16px;
+            .size(100%; 16px);
+        }
+    }
+    
+    .nav-menu__item{
+        @media @phone {
+            justify-content: flex-start;
+        }
+    }
+}
+
+
+
+.page-header {
+    .bg-white();
+	flex: 0 0 auto;
+	margin-top: auto;
+}
+
+.page-main {
+    .bg-white();
+	flex: 1 0 auto;
+}
+
+.page-footer {	
+    .bg-white();
+	flex: 0 0 auto;
+}

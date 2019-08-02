@@ -1,0 +1,48 @@
+/*functions*/
+.text-block-parameters(@font-size; @line-height; @font-weight; @color; @margin) {
+    font-size: @font-size;
+    line-height: @line-height;
+    font-weight: @font-weight; 
+    color: @color; 
+    margin: @margin;
+}
+
+.flex-block-parameteres(@flex-direction; @justify-content: flex-start; @align-items: stretch) {
+    display: flex;
+    flex-direction: @flex-direction;
+    justify-content: @justify-content;
+    align-items: @align-items;
+}
+
+.size(@width; @height) {
+    width: @width;
+    height: @height;
+}
+
+.default-title-style() {
+    .text-block-parameters(21px; 26px; bold; @base-text-color; 0 auto);
+}
+
+.default-paragraph-style() {
+    .text-block-parameters(14px; 21px; normal; @lightened-text-color; 0 auto);
+}
+
+.bg-blue() {
+    background-color: @blue;
+}
+
+.bg-white() {
+    background-color: @white;
+}
+
+.bg-gray() {
+    background-color: @gray;
+}
+
+.horisontal-centered() {
+    margin: 0 auto;
+}
+
+.sans-serif() {
+    font-family: 'PT Sans', sans-serif;
+}

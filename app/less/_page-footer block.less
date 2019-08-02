@@ -1,0 +1,147 @@
+/*page-footer block*/
+.page-footer {
+	display: flex;
+	height: 120px;
+    align-items: center;
+    width: 100%;
+
+    @media @phone {
+        flex-direction: column;
+        height: 233px;
+		flex-direction: column;
+		align-items: center;
+    }
+
+    &__hashtag,
+    &__follow-us,
+    &__copyright {
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .hashtag {
+        .flex-block-parameteres(row; flex-start; center);
+        padding-left: 120px;
+        .default-title-style();
+        @media @tablet {
+            padding-left: 60px;
+        }
+
+        @media @phone {
+            .size(100%; 98px);
+		    padding: 0;
+		    justify-content: center;
+        }
+    }
+    
+    .follow-us {
+        vertical-align: middle;
+        font-size: 0;
+
+        @media @phone {
+            width: 100%;
+            margin-bottom: 14px;
+        }
+        
+        &__list {
+            padding-left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media @phone {
+                padding-left: 0;
+            }
+        }
+
+        &__item {
+            margin-right: 6px;
+        }
+
+        &__link {
+            .size(48px; 48px);
+            display: flex;
+            background: @blue;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 100;
+            }
+
+            &:hover svg,
+            &:hover,
+            & svg:hover{
+                background-color: @blue-darkened;
+                fill: @white;
+            }
+            
+            &:active svg,
+            &:active {
+                fill: @button-active-text-color;
+                background-color: @blue-dark;
+            }
+            
+            & svg:active {
+                fill: @button-active-text-color;
+            }
+        }
+
+        &__svg {
+            fill: @white;
+            &--twitter {
+                .size(18px; 24px);
+            }
+            &--facebook {
+                .size(9px; 18px);
+            }
+            &--youtube {
+                .size(20px; 14px);
+            }
+        }
+    }
+
+    .copyright {
+        .flex-block-parameteres(row; flex-end; center);
+        padding-right: 120px;
+        @media @tablet {
+            padding-right: 60px;
+        }
+
+        @media @phone {
+		    padding: 0;
+            justify-content: center;
+        }
+
+        &__text {
+            .text-block-parameters(14px; 26px; normal; @base-text-color; auto);
+            margin-right: 11px;
+            @media @phone {
+                margin-left: 0;
+            }
+        }
+
+        &__link {
+            display: inline-block;
+        }
+
+        &__svg {
+            display: inline-block;
+            .size(27px; 34px);
+
+            &:hover {
+                fill: @hover-text-color;
+            }
+            &:active {
+                fill: @lightened-text-color;
+            }
+        }
+    }
+}

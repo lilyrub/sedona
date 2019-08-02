@@ -1,0 +1,148 @@
+/*recommendations-container block*/
+.recommendations-container {
+    display: flex;
+
+    @media @phone {
+        .bg-white();
+        flex-direction: column;
+		height: 416px;
+		justify-content: space-around;
+    }
+
+    &__recommendation {
+        .size(33.3%; 330px);
+    }
+
+    .recommendation {
+        .horisontal-centered();
+        text-align: center;
+        position: relative;
+
+        @media @phone {
+            .size(87.5%; auto);
+            .horisontal-centered();
+            min-width: 280px;
+            display: flex;
+        }
+    
+        &__name {
+            .default-title-style();
+            padding-top: 25px;
+            margin-bottom: 20px;
+
+            @media @phone {
+                padding-top: 31px;
+                font-size: 18px;
+                margin-bottom: 15px;
+                max-width: 210px;
+                text-align: left;
+                margin-left: 0;
+            }
+        }
+    
+        &__text {
+            .default-paragraph-style();
+            @media @tablet {
+                max-width: 160px;
+            }
+
+            @media @phone {
+                text-align: left;	
+                margin-left: 0;
+            }
+        }
+
+        &__picture {
+            display: inline-block;
+            fill: @blue;
+
+        }
+
+        &__icon-block {
+            @media @phone {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .size(48px; 48px);
+                margin-top: 20px;
+                margin-right: 5px;
+                flex-shrink: 0;
+            }
+        }
+
+        .house {
+            .size(75px; 72px);
+            margin-top: 60px;
+
+            @media @phone {
+                display: inline-block;
+            .size(39px; 37px);
+		    margin-top: 0;
+            }
+        }
+        
+        .hamburger {
+            .size(77px; 68px);
+            margin-top: 63px;
+
+            @media @phone {
+                display: inline-block;
+                .size(40px; 35px);
+		        margin-top: 0;
+            }
+        }
+        
+        .gift {
+            .size(64px; 75px);	
+            margin-top: 57px;
+
+            @media @phone {
+                display: inline-block;
+                .size(32px; 38px);
+		        margin-top: 0;
+            }
+        }
+    }
+}
+
+
+/*recommendations-container block tablet and phone changes*/
+@media @tablet  {
+    .souvenirs {
+        .recommendation__text {
+            max-width: 170px;
+        }
+    }
+
+    .accommodation {
+        .recommendation-text {
+            height: 63px;
+            max-width: 166px;
+        }   
+        br {		
+            content: " ";
+            display: none;		
+        }
+    }
+}
+
+
+@media @phone {
+	.food {
+        .recommendation__text {
+		    padding-bottom: 31px;
+	    }
+    }
+	
+	.accommodation {
+		order: 1;
+	}
+
+	.food {
+		order: 3;
+	}
+
+	.souvenirs {
+		order: 2;
+    }
+}

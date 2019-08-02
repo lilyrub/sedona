@@ -1,0 +1,41 @@
+/*reasons-header block*/
+.reasons-header {
+    .horisontal-centered();
+    .flex-block-parameteres(column; center);
+    height: 206px;
+    text-align: center;
+
+    @media @phone {
+        .bg-white();
+        .horisontal-centered();
+        clip-path: polygon(0% 95%, 50% 100%, 100% 95%, 100% 0%, 0% 0%);
+        padding-top: 40px;
+        height: 210px;
+        justify-content: flex-start;
+    }
+
+    &__title {
+        .default-title-style();
+        margin-bottom: 29px;
+        @media @phone {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 36px;
+            width: 270px;
+        }
+    }
+
+    &__description {
+        .default-paragraph-style();
+        letter-spacing: 0;
+        @media @phone {
+            font-size: 14px;
+            line-height: 26px;
+            width: 270px;
+        }
+    }
+
+    &__shape {
+        display: none;
+    }
+}

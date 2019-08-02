@@ -1,0 +1,188 @@
+/*reason-container block*/
+.reason-container {
+    display: flex;	
+    width: 100%;
+
+    @media @phone {
+        flex-direction: column;
+    }
+
+    &--reverse {
+        @media @phone {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__reason {
+        .size(33.3%; 256px);
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    &__reason-picture {
+        width: 66.6%;
+        flex-grow: 2;
+        @media @phone {
+            width: 100%;
+		    flex-grow: 1;
+        }
+    }
+
+    .reason {
+        @media @phone {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+		    flex-direction: column;
+            justify-content: center;
+        }
+
+        &__name {
+            .default-title-style();
+            padding-top: 57px;
+            margin-bottom: 10px;
+
+            &--white {
+                color: @white;
+            }
+
+            @media @phone {
+                font-size: 18px;
+            }
+        }
+        
+        &__number {
+            .default-paragraph-style();
+            margin-bottom: 20px;
+
+            &--white {
+                color: @white;
+            }
+        }
+    
+        &__text {
+            .default-paragraph-style();
+
+            &--white {
+                color: @white;
+            }
+
+            @media @phone {
+                width: 270px;
+            }
+        }
+    
+        &--blue {
+            background-color: @blue;
+        }
+    
+        &--gray {
+            background-color: @gray;
+
+            @media @phone {
+                background-color: @gray-superlight;
+            }
+        }
+    }
+
+    .reason-picture {
+        &--one {
+            background: url("../img/photo-city.jpg") no-repeat center center;
+
+            @media @tablet {
+                background-size: cover;
+            }
+
+            @media @phone {
+                height: 256px;	
+                background-size: cover;
+            }
+        }
+    
+        &--two {
+            background: url("../img/photo-bridge.jpg") no-repeat center center;
+
+            @media @tablet {
+                background-size: cover;
+            }
+
+            @media @phone {
+                height: 260px;
+		        background-size: cover;	
+            }
+        }
+    }
+}
+
+
+/*reason-blue tablet and phone changes*/
+.reason--blue {
+    @media @tablet {
+        .reason__name {
+            max-width: 151px;
+            padding-top: 46px;
+        }
+        .reason__text {
+            max-width: 171px;
+            height: 63px;
+        }
+        br {
+            content: " ";
+            display: none;
+        }
+    }
+
+    @media @phone {
+        &:first-child {
+            height: 211px;
+        }
+        &:last-child {
+            height: 191px;
+        }
+
+        .reason__name {
+            padding-top: 0;
+        }
+
+        .reason__number {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.reason--gray {
+    @media @tablet {
+        .reason__name {
+            max-width: 160px;
+        }
+        
+        .reason__text {
+            max-width: 160px;
+        }
+    }
+
+    @media @phone {
+		height: 167px;
+        position: relative;
+        .flex-block-parameteres(column; center; center);
+        
+        .reason__name {
+            padding-top: 0;
+        }
+
+        .reason__text {
+            width: 250px;
+        }
+
+        ::after {
+            display: block;
+            position: absolute;
+            .size(88%; 1px);
+            background-color: #e3e3e3;
+            bottom: 0;
+            content: "";
+            left: 6%;
+        }
+    }
+}
+
